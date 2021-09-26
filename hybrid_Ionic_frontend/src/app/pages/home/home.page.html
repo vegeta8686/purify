@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Purify</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-img src="assets/water_holders/two_cans.jpg" [routerLink]="['/pages/orders/normal']" routerLinkActive="router-link-active" ></ion-img>
+        </ion-card>
+        <p>
+          <a [routerLink]="['/pages/orders/normal']" routerLinkActive="router-link-active">Order Water</a>
+        </p>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-img src="assets/water_holders/five_cans.jpg" [routerLink]="['/pages/orders/cooling']" routerLinkActive="router-link-active"></ion-img>
+        </ion-card>
+        <p>
+          <a [routerLink]="['/pages/orders/cooling']" routerLinkActive="router-link-active">Wanna Buy Cans?</a>
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-img src="assets/water_holders/purifier_three_cans.jpeg"></ion-img>
+        </ion-card>
+        <p>
+          <a href="#">Water Purifiers</a>
+        </p>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-img src="assets/water_holders/water_presser.jpeg"></ion-img>
+        </ion-card>
+        <p>
+          <a href="#">More</a>
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

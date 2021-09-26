@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="auth"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{type}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Log in form based on the type it shows if user click log in it will appear -->
+  <form *ngIf="type === 'Log In'" [formGroup]="loginForm" (ngSubmit)="login()">
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" formControlName="mail" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" formControlName="password" required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block" [disabled]="loginForm.invalid">Sign In</ion-button>
+        <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
+      </ion-col>
+    </ion-row>
+  </form>
+   <!-- Register  form based on the type it shows if user click sign in it will appear -->
+  <form *ngIf="!(type === 'Log In')" [formGroup]="registerForm" (ngSubmit)="register()">
+    <ion-item lines="full">
+      <ion-label position="floating">Name</ion-label>
+      <ion-input type="text" formControlName="name" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Mobile No</ion-label>
+      <ion-input type="number" formControlName="mobileNo" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" formControlName="mail" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" formControlName="password" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Address</ion-label>
+      <ion-textarea formControlName="address" rows="6" cols="20" placeholder="Enter your address here..." required></ion-textarea>
+      <!-- <ng-container formGroupName="address">
+      <ion-input placeholder="Address Line 1" formControlName="address1" type="text"></ion-input>
+      <ion-input placeholder="Address Line 2" formControlName="address2" type="text"></ion-input>
+      <ion-input placeholder="City" formControlName="city" type="text"></ion-input>
+      <ion-input placeholder="State" formControlName="state" type="text"></ion-input>
+      <ion-input placeholder="Zip Code" formControlName="zip" type="number"></ion-input>
+    </ng-container> -->
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block" [disabled]="registerForm.invalid">Sign Up</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+  <!-- reset password form  -->
+  <!-- <form *ngIf="type">
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">Send</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <small>
+      Please provide the username or email address that you used when you signed
+      up for your Evernote account.
+    </small>
+  </form> -->
+</ion-content>

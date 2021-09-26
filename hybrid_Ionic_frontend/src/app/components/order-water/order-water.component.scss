@@ -1,0 +1,20 @@
+ion-grid {
+
+  ion-row {
+
+    ion-col {
+
+      ion-card {
+        margin: 1px;
+        width: 160px;
+        height: 200px;
+
+        ion-img {
+          margin: 0;
+          width: inherit;
+          height: inherit;
+        }
+      }
+    }
+  }
+}

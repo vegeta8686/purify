@@ -1,0 +1,39 @@
+ion-content {
+
+  ion-grid {
+    margin: 50px 0 0 0;
+
+    ion-row {
+
+      ion-col {
+
+        ion-card {
+          width: 145px;
+          height: 140px;
+          cursor: pointer;
+          box-shadow: rgba(251, 253, 253, 0.938) 0px 0px 0px 3px;
+
+          &:active {
+            box-shadow: none;
+          }
+
+          ion-img {
+            width: inherit;
+            height: inherit;
+          }
+        }
+
+        p {
+          text-align: center;
+          cursor: pointer;
+
+          a {
+            text-decoration: none;
+            font-family: 'Times New Roman', Times, serif;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

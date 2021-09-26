@@ -1,0 +1,7 @@
+{
+  "name": "purify",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
